@@ -19,6 +19,7 @@ class ViewController: UIViewController {
                 println(font)
             }
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +27,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func submit(sender: UIButton) {
+        sender.alpha = 0.4
+        sender.enabled = false;
+        KeyRecognizeButton.deactiveAll(self.view)
+        
+    }
 
 }
 

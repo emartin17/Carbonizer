@@ -23,6 +23,7 @@ class KeyRecognizeButton: UIButton {
         self.flatImage = UIImageView()
         buttons = [KeyRecognizeButton]()
         super.init(coder: aDecoder)
+        
         //Add touch recognizer
         self.addTarget(self, action: "buttonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -30,7 +31,8 @@ class KeyRecognizeButton: UIButton {
         self.layer.borderColor = UIColor(white:221/255, alpha: 1.0).CGColor
         self.layer.borderWidth = 1.0
         self.backgroundColor = UIColor.clearColor()
-        self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: .Normal)
+        //        self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: .Normal)
+        self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         self.titleLabel?.font = UIFont(name: "OpenSans-Light", size: 26.25)
         
         //Set up sharpImage ImageView
@@ -42,9 +44,11 @@ class KeyRecognizeButton: UIButton {
         //Set up flatImage ImageView
         self.flatImage.frame = CGRectMake(self.frame.width*0.7172, 16.5, 8.5, 23.5)
         self.flatImage.image = UIImage(named: "flat.png")
-        self.flatImage.alpha = 0.4;
         self.flatImage.hidden = true;
         self.addSubview(flatImage)
+        if self.titleForState(UIControlState.Normal) != "0" {
+            self.flatImage.alpha = 0.4;
+        }
     }
     
     func setState(toActive : Bool) {
@@ -66,7 +70,8 @@ class KeyRecognizeButton: UIButton {
                 self.sharpImage.frame = sharpFrame
                 self.flatImage.frame = flatFrame
                 }, completion: nil)
-            self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            self.layer.backgroundColor = UIColor(white: 245/255, alpha: 0.75).CGColor
+            //self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         }
         else {
             self.activeState = false
@@ -79,30 +84,44 @@ class KeyRecognizeButton: UIButton {
                 self.flatImage.hidden = true;
                 self.setAccidental(true)
                 }, completion: nil)
-            self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: UIControlState.Normal)
+            self.layer.backgroundColor = UIColor.whiteColor().CGColor
+            //self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: UIControlState.Normal)
         }
     }
     
     func setAccidental(toSharp : Bool) {
-        if toSharp {
-            self.sharpActive = true
-            UIView.transitionWithView(self, duration: 0.10, options:UIViewAnimationOptions.CurveLinear, animations: {
-                let tmpOrigin = self.flatImage.frame.origin
-                self.flatImage.frame.origin = self.sharpImage.frame.origin
-                self.sharpImage.frame.origin = tmpOrigin
-                self.flatImage.alpha = 0.4
-                self.sharpImage.alpha = 1.0
-                }, completion: nil)
+        if self.titleForState(UIControlState.Normal) != "0" {
+            if toSharp {
+                self.sharpActive = true
+                UIView.transitionWithView(self, duration: 0.10, options:UIViewAnimationOptions.CurveLinear, animations: {
+                    let tmpOrigin = self.flatImage.frame.origin
+                    self.flatImage.frame.origin = self.sharpImage.frame.origin
+                    self.sharpImage.frame.origin = tmpOrigin
+                    self.flatImage.alpha = 0.4
+                    self.sharpImage.alpha = 1.0
+                    }, completion: nil)
+            }
+            else {
+                self.sharpActive = false
+                UIView.transitionWithView(self, duration: 0.10, options: UIViewAnimationOptions.CurveLinear, animations: {
+                    let tmpOrigin = self.sharpImage.frame.origin
+                    self.sharpImage.frame.origin = self.flatImage.frame.origin
+                    self.flatImage.frame.origin = tmpOrigin
+                    self.sharpImage.alpha = 0.4
+                    self.flatImage.alpha = 1.0
+                    }, completion: nil)
+            }
         }
         else {
-            self.sharpActive = false
-            UIView.transitionWithView(self, duration: 0.10, options: UIViewAnimationOptions.CurveLinear, animations: {
-                let tmpOrigin = self.sharpImage.frame.origin
-                self.sharpImage.frame.origin = self.flatImage.frame.origin
-                self.flatImage.frame.origin = tmpOrigin
-                self.sharpImage.alpha = 0.4
-                self.flatImage.alpha = 1.0
-                }, completion: nil)
+            UIView.transitionWithView(self, duration: 0.075, options: UIViewAnimationOptions.CurveLinear, animations: {
+                self.sharpImage.transform = CGAffineTransformMakeScale(0.50, 0.50)
+                self.flatImage.transform = CGAffineTransformMakeScale(0.50, 0.50)
+                }, completion: { (finished: Bool) -> () in
+                    UIView.transitionWithView(self, duration: 0.075, options: UIViewAnimationOptions.CurveLinear, animations: {
+                        self.sharpImage.transform = CGAffineTransformIdentity
+                        self.flatImage.transform = CGAffineTransformIdentity
+                        }, completion: nil)
+            })
         }
     }
     
@@ -122,8 +141,8 @@ class KeyRecognizeButton: UIButton {
     
     //Return the KeyRecognizeButton (if any) in active state
     func getActiveButton() -> KeyRecognizeButton? {
-        if let view = self.superview {
-            for view in view.subviews {
+        if let superView = self.superview {
+            for view in superView.subviews {
                 if view.isKindOfClass(KeyRecognizeButton) {
                     if let isActive = view.activeState {
                         if isActive {
@@ -135,6 +154,14 @@ class KeyRecognizeButton: UIButton {
             }
         }
         return nil
+    }
+    
+    class func deactiveAll(aView : UIView) {
+        for view in aView.subviews {
+            if view.isKindOfClass(KeyRecognizeButton) {
+                view.setState(false)
+            }
+        }
     }
     
 }

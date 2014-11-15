@@ -70,7 +70,7 @@ class KeyRecognizeButton: UIButton {
                 self.sharpImage.frame = sharpFrame
                 self.flatImage.frame = flatFrame
                 }, completion: nil)
-            self.layer.backgroundColor = UIColor(white: 245/255, alpha: 0.75).CGColor
+            self.layer.backgroundColor = UIColor(white: 242/255, alpha: 1.0).CGColor
             //self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         }
         else {

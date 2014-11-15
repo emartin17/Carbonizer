@@ -21,7 +21,7 @@ class ViewChangeSegmentedControl: UISegmentedControl {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let textGrey = UIColor(white: 221/255, alpha: 0.75)
+        let textGrey = UIColor(white: 242/255, alpha: 1.0)
         //        self.frame.size.height = 59.5
         self.layer.borderColor = textGrey.CGColor
         self.layer.borderWidth = 1

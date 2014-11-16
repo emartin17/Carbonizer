@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88484CF21A1821B900DDB473 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 88484CF11A1821B900DDB473 /* README.md */; };
 		88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */; };
 		88A644811A1535690072BF4A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */; };
 		88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CC51A1454A800BE8065 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88484CF11A1821B900DDB473 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewChangeSegmentedControl.swift; sourceTree = "<group>"; };
 		88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		88AE9CC01A1454A800BE8065 /* CarbonizerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonizerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,9 +70,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88484CF31A1821C800DDB473 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				88484CF11A1821B900DDB473 /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		88AE9CB71A1454A800BE8065 = {
 			isa = PBXGroup;
 			children = (
+				88484CF31A1821C800DDB473 /* Metadata */,
 				88AE9CC21A1454A800BE8065 /* CarbonizerSwift */,
 				88AE9CD81A1454A800BE8065 /* CarbonizerSwiftTests */,
 				88AE9CC11A1454A800BE8065 /* Products */,
@@ -244,6 +255,7 @@
 			files = (
 				88AE9CC81A1454A800BE8065 /* ViewController.swift in Sources */,
 				88AE9CF11A14612600BE8065 /* KeyRecognizeButton.swift in Sources */,
+				88484CF21A1821B900DDB473 /* README.md in Sources */,
 				88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */,
 				88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 class ManagerViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
-        navC = UINavigationController()
+        pageVC = UIPageViewController()
         quizVC = UIViewController()
         studyVC = UIViewController()
         super.init(coder: aDecoder)
@@ -19,7 +19,7 @@ class ManagerViewController: UIViewController {
     
     
     
-    var navC : UINavigationController
+    var pageVC : UIPageViewController
     var quizVC : UIViewController
     var studyVC : UIViewController
     
@@ -32,6 +32,7 @@ class ManagerViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib
         quizVC = self.storyboard?.instantiateViewControllerWithIdentifier("quiz") as UIViewController
         studyVC = self.storyboard?.instantiateViewControllerWithIdentifier("study") as UIViewController
+        pageVC.setViewControllers([quizVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,16 +42,16 @@ class ManagerViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        navC = segue.destinationViewController as UINavigationController
-        println("MARK: \(navC)")
+        pageVC = segue.destinationViewController as UIPageViewController
+        
     }
     
     @IBAction func viewSwitcherPressed(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            navC.popViewControllerAnimated(true)
+            pageVC.setViewControllers([quizVC], direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil)
         }
-        if sender.selectedSegmentIndex == 1 {
-            self.navC.pushViewController(self.studyVC, animated: true)
+        else if sender.selectedSegmentIndex == 1 {
+            pageVC.setViewControllers([studyVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         }
     }
 }

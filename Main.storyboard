@@ -51,7 +51,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15K-2a-PoP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <connections>
-                                    <segue destination="UJP-0v-xTw" kind="embed" id="Uyr-dd-Z9j"/>
+                                    <segue destination="nbp-7W-AF9" kind="embed" id="UM9-Pl-baB"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -133,21 +133,13 @@
             </objects>
             <point key="canvasLocation" x="-1083" y="188.25"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Lch-W3-uoL">
+        <!--Page View Controller-->
+        <scene sceneID="jZt-yD-kKS">
             <objects>
-                <navigationController navigationBarHidden="YES" id="UJP-0v-xTw" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Lt-8Z-26o">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Yjb-3K-FPV" kind="relationship" relationship="rootViewController" id="z39-9m-IQQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LQS-pr-nkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nbp-7W-AF9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYb-hg-oBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="147.375"/>
+            <point key="canvasLocation" x="-183" y="147.375"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="Dba-bz-WEn">
@@ -252,7 +244,8 @@
                                         <exclude reference="5CC-e2-IxZ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="99" width="400" height="45"/>
                                     <mask key="constraints">
                                         <include reference="5CC-e2-IxZ"/>
                                     </mask>
@@ -277,7 +270,8 @@
                                         <exclude reference="fTC-eu-0Ap"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="356" y="45" width="28" height="6"/>
                                     <mask key="constraints">
                                         <include reference="0d1-qT-0wq"/>
                                         <include reference="fTC-eu-0Ap"/>
@@ -297,7 +291,8 @@
                                         <exclude reference="R4a-hK-Vnk"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="182" y="146" width="36" height="25"/>
                                     <mask key="constraints">
                                         <include reference="R4a-hK-Vnk"/>
                                     </mask>
@@ -347,7 +342,8 @@
                                         <exclude reference="DC9-64-Xjv"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="167" y="76" width="67" height="21"/>
                                     <mask key="constraints">
                                         <include reference="DC9-64-Xjv"/>
                                     </mask>
@@ -362,20 +358,16 @@
                             </constraint>
                             <constraint firstItem="etI-wN-gfm" firstAttribute="top" secondItem="ynn-1o-aWI" secondAttribute="bottom" constant="-1" id="2qO-7w-w2O"/>
                             <constraint firstItem="JOF-U1-esI" firstAttribute="trailing" secondItem="IVl-m6-EIC" secondAttribute="trailing" id="36y-MN-gSB"/>
-                            <constraint firstAttribute="centerX" secondItem="nlY-ai-cfe" secondAttribute="centerX" id="3Tr-2A-cw6"/>
                             <constraint firstAttribute="trailing" secondItem="zOh-JW-mPR" secondAttribute="trailing" constant="23" id="3gR-kI-SMe">
                                 <variation key="heightClass=regular-widthClass=compact" constant="16"/>
                             </constraint>
                             <constraint firstItem="dai-gl-9FE" firstAttribute="top" secondItem="Gjj-2i-m3j" secondAttribute="bottom" constant="-1" id="3ka-j2-18C"/>
                             <constraint firstItem="ynn-1o-aWI" firstAttribute="trailing" secondItem="eUq-Qz-AM9" secondAttribute="trailing" id="4Lg-q1-cyr"/>
-                            <constraint firstItem="Gjj-2i-m3j" firstAttribute="top" secondItem="wvR-yN-zON" secondAttribute="bottom" constant="143" id="4vZ-eC-dZL"/>
                             <constraint firstItem="Gjj-2i-m3j" firstAttribute="top" secondItem="eUq-Qz-AM9" secondAttribute="top" id="5Hg-JE-YTy"/>
                             <constraint firstItem="dai-gl-9FE" firstAttribute="leading" secondItem="kcN-vZ-6Kc" secondAttribute="leading" id="5iG-s3-iGj"/>
                             <constraint firstItem="ynn-1o-aWI" firstAttribute="leading" secondItem="eUq-Qz-AM9" secondAttribute="leading" id="9Jc-yL-IP3"/>
                             <constraint firstItem="nlY-ai-cfe" firstAttribute="centerX" secondItem="d59-YR-jbq" secondAttribute="centerX" id="CUL-Ji-nUO"/>
                             <constraint firstItem="qsW-DK-Svf" firstAttribute="height" secondItem="etI-wN-gfm" secondAttribute="height" id="Grk-T5-ZIW"/>
-                            <constraint firstItem="eUq-Qz-AM9" firstAttribute="top" secondItem="wvR-yN-zON" secondAttribute="bottom" constant="143" id="H7t-5k-u06"/>
-                            <constraint firstItem="eUq-Qz-AM9" firstAttribute="height" secondItem="Gjj-2i-m3j" secondAttribute="height" id="I6k-Ae-Dgw"/>
                             <constraint firstItem="Gjj-2i-m3j" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wvR-yN-zON" secondAttribute="bottom" constant="50" id="JS4-Ex-p9i">
                                 <variation key="heightClass=regular-widthClass=compact" constant="8" symbolic="YES"/>
                             </constraint>
@@ -404,27 +396,18 @@
                             </constraint>
                             <constraint firstItem="dai-gl-9FE" firstAttribute="height" secondItem="Gjj-2i-m3j" secondAttribute="height" id="cKQ-2c-QqY"/>
                             <constraint firstItem="ynn-1o-aWI" firstAttribute="height" secondItem="etI-wN-gfm" secondAttribute="height" id="cqg-g6-c8w"/>
-                            <constraint firstItem="JOF-U1-esI" firstAttribute="height" secondItem="IVl-m6-EIC" secondAttribute="height" id="eRK-nF-7sR"/>
-                            <constraint firstItem="eUq-Qz-AM9" firstAttribute="height" secondItem="ynn-1o-aWI" secondAttribute="height" id="efG-oZ-c0Q"/>
                             <constraint firstItem="JOF-U1-esI" firstAttribute="height" secondItem="IVl-m6-EIC" secondAttribute="height" id="esk-Vr-R2s"/>
                             <constraint firstItem="JOF-U1-esI" firstAttribute="bottom" secondItem="AHS-rd-ahZ" secondAttribute="bottom" id="fFE-Q2-1PE"/>
-                            <constraint firstItem="wvR-yN-zON" firstAttribute="top" secondItem="nlY-ai-cfe" secondAttribute="bottom" constant="8" id="ghS-gs-AT7">
-                                <variation key="heightClass=regular-widthClass=compact" constant="4"/>
-                            </constraint>
                             <constraint firstItem="kcN-vZ-6Kc" firstAttribute="top" secondItem="dai-gl-9FE" secondAttribute="bottom" constant="-1" id="iiQ-FO-gyE"/>
                             <constraint firstItem="IVl-m6-EIC" firstAttribute="top" secondItem="kcN-vZ-6Kc" secondAttribute="bottom" constant="-1" id="jNl-IH-BWb"/>
                             <constraint firstItem="nlY-ai-cfe" firstAttribute="width" secondItem="s0y-Wy-V3N" secondAttribute="width" id="jma-b4-Nzo"/>
                             <constraint firstItem="d59-YR-jbq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zOh-JW-mPR" secondAttribute="bottom" constant="25" id="k9Y-Mh-BcL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstAttribute="centerY" secondItem="wvR-yN-zON" secondAttribute="centerY" constant="165.5" id="lTh-bh-vmy"/>
                             <constraint firstItem="JOF-U1-esI" firstAttribute="top" secondItem="qsW-DK-Svf" secondAttribute="bottom" id="m9H-UP-aoJ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="eUq-Qz-AM9" firstAttribute="leading" secondItem="nlY-ai-cfe" secondAttribute="leading" id="mJ3-ZN-QcE"/>
-                            <constraint firstItem="nlY-ai-cfe" firstAttribute="top" secondItem="d59-YR-jbq" secondAttribute="bottom" constant="8" id="mgR-VC-Tl2">
-                                <variation key="heightClass=regular-widthClass=compact" constant="4"/>
-                            </constraint>
                             <constraint firstItem="JOF-U1-esI" firstAttribute="leading" secondItem="AHS-rd-ahZ" secondAttribute="leading" id="oCT-WB-lGW"/>
                             <constraint firstItem="dai-gl-9FE" firstAttribute="leading" secondItem="Gjj-2i-m3j" secondAttribute="leading" id="pim-y6-bVo"/>
                             <constraint firstItem="zOh-JW-mPR" firstAttribute="top" secondItem="SY5-h3-Cb8" secondAttribute="bottom" priority="750" constant="45" id="rQG-O9-55I"/>
@@ -458,31 +441,22 @@
                                 <exclude reference="M6d-am-rMZ"/>
                                 <exclude reference="ZkS-MW-zSF"/>
                                 <exclude reference="k9Y-Mh-BcL"/>
-                                <exclude reference="3Tr-2A-cw6"/>
                                 <exclude reference="CUL-Ji-nUO"/>
                                 <exclude reference="OLC-EN-Zmv"/>
                                 <exclude reference="jma-b4-Nzo"/>
-                                <exclude reference="mgR-VC-Tl2"/>
                                 <exclude reference="vXi-Uz-jBx"/>
                                 <exclude reference="OHi-Ob-Eij"/>
-                                <exclude reference="ghS-gs-AT7"/>
-                                <exclude reference="lTh-bh-vmy"/>
                                 <exclude reference="0Qo-QG-iff"/>
                                 <exclude reference="36y-MN-gSB"/>
                                 <exclude reference="MFV-kk-b01"/>
                                 <exclude reference="Q4x-ep-ibH"/>
-                                <exclude reference="eRK-nF-7sR"/>
                                 <exclude reference="esk-Vr-R2s"/>
                                 <exclude reference="m9H-UP-aoJ"/>
                                 <exclude reference="oCT-WB-lGW"/>
                                 <exclude reference="3gR-kI-SMe"/>
                                 <exclude reference="rQG-O9-55I"/>
                                 <exclude reference="yCT-uH-n5f"/>
-                                <exclude reference="H7t-5k-u06"/>
-                                <exclude reference="I6k-Ae-Dgw"/>
-                                <exclude reference="efG-oZ-c0Q"/>
                                 <exclude reference="mJ3-ZN-QcE"/>
-                                <exclude reference="4vZ-eC-dZL"/>
                                 <exclude reference="5Hg-JE-YTy"/>
                                 <exclude reference="JS4-Ex-p9i"/>
                                 <exclude reference="MMr-yt-hhX"/>
@@ -537,31 +511,22 @@
                                 <include reference="M6d-am-rMZ"/>
                                 <include reference="ZkS-MW-zSF"/>
                                 <include reference="k9Y-Mh-BcL"/>
-                                <exclude reference="3Tr-2A-cw6"/>
                                 <include reference="CUL-Ji-nUO"/>
                                 <include reference="OLC-EN-Zmv"/>
                                 <include reference="jma-b4-Nzo"/>
-                                <exclude reference="mgR-VC-Tl2"/>
                                 <include reference="vXi-Uz-jBx"/>
                                 <include reference="OHi-Ob-Eij"/>
-                                <exclude reference="ghS-gs-AT7"/>
-                                <exclude reference="lTh-bh-vmy"/>
                                 <include reference="0Qo-QG-iff"/>
                                 <include reference="36y-MN-gSB"/>
                                 <include reference="MFV-kk-b01"/>
                                 <include reference="Q4x-ep-ibH"/>
-                                <exclude reference="eRK-nF-7sR"/>
                                 <include reference="esk-Vr-R2s"/>
                                 <include reference="m9H-UP-aoJ"/>
                                 <include reference="oCT-WB-lGW"/>
                                 <include reference="3gR-kI-SMe"/>
                                 <include reference="rQG-O9-55I"/>
                                 <include reference="yCT-uH-n5f"/>
-                                <exclude reference="H7t-5k-u06"/>
-                                <exclude reference="I6k-Ae-Dgw"/>
-                                <exclude reference="efG-oZ-c0Q"/>
                                 <include reference="mJ3-ZN-QcE"/>
-                                <exclude reference="4vZ-eC-dZL"/>
                                 <include reference="5Hg-JE-YTy"/>
                                 <include reference="JS4-Ex-p9i"/>
                                 <include reference="MMr-yt-hhX"/>
@@ -600,12 +565,11 @@
                     <navigationItem key="navigationItem" id="iC5-e2-1ht"/>
                     <connections>
                         <outlet property="scoreLabel" destination="d59-YR-jbq" id="fME-b7-9Lc"/>
-                        <segue destination="MAe-xv-86W" kind="show" identifier="toStudy" id="elV-rB-USn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyW-2e-e0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="147.375"/>
+            <point key="canvasLocation" x="642" y="-172.5"/>
         </scene>
         <!--Study-->
         <scene sceneID="OGu-N5-a9o">
@@ -644,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yII-S1-DVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417.5" y="147.375"/>
+            <point key="canvasLocation" x="642" y="540"/>
         </scene>
     </scenes>
     <resources>

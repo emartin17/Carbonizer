@@ -29,7 +29,6 @@ class ViewChangeSegmentedControl: UISegmentedControl {
         let activeAttributes : [NSString : AnyObject] = [NSFontAttributeName: UIFont(name: "OpenSans-Semibold", size: 18), NSForegroundColorAttributeName: UIColor.blackColor()]
         let passiveAttributes : [NSString : AnyObject] = [NSFontAttributeName: UIFont(name: "OpenSans-Semibold", size: 18), NSForegroundColorAttributeName: textGrey]
         self.setTitleTextAttributes(activeAttributes, forState: UIControlState.Selected)
-        //self.setTitleTextAttributes(passiveAttributes, forState: UIControlState.Normal)
         self.setTitleTextAttributes(activeAttributes, forState: UIControlState.Normal)
         self.tintColor = UIColor(white: 245/255, alpha: 1.0)
         self.setDividerImage(UIImage(named: "Divider.png"), forLeftSegmentState: UIControlState.Selected, rightSegmentState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)

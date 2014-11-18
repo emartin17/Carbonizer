@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		88484CF21A1821B900DDB473 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 88484CF11A1821B900DDB473 /* README.md */; };
 		888A0E081A195EE4009E9F10 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0E071A195EE4009E9F10 /* ManagerViewController.swift */; };
 		888A0E0A1A195EEE009E9F10 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0E091A195EEE009E9F10 /* StudyViewController.swift */; };
-		88A58C0D1A1A9EE900B03818 /* TabHandlerPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A58C0C1A1A9EE900B03818 /* TabHandlerPageController.swift */; };
 		88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */; };
 		88A644811A1535690072BF4A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */; };
 		88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CC51A1454A800BE8065 /* AppDelegate.swift */; };
@@ -39,7 +37,6 @@
 		88484CF11A1821B900DDB473 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		888A0E071A195EE4009E9F10 /* ManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
 		888A0E091A195EEE009E9F10 /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
-		88A58C0C1A1A9EE900B03818 /* TabHandlerPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabHandlerPageController.swift; path = ../TabHandlerPageController.swift; sourceTree = "<group>"; };
 		88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewChangeSegmentedControl.swift; sourceTree = "<group>"; };
 		88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		88AE9CC01A1454A800BE8065 /* CarbonizerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonizerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +84,6 @@
 		888A0E0B1A195EFC009E9F10 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				88A58C0C1A1A9EE900B03818 /* TabHandlerPageController.swift */,
 				888A0E071A195EE4009E9F10 /* ManagerViewController.swift */,
 				88AE9CC71A1454A800BE8065 /* QuizViewController.swift */,
 				888A0E091A195EEE009E9F10 /* StudyViewController.swift */,
@@ -283,8 +279,6 @@
 				88AE9CC81A1454A800BE8065 /* QuizViewController.swift in Sources */,
 				888A0E0A1A195EEE009E9F10 /* StudyViewController.swift in Sources */,
 				88AE9CF11A14612600BE8065 /* KeyRecognizeButton.swift in Sources */,
-				88A58C0D1A1A9EE900B03818 /* TabHandlerPageController.swift in Sources */,
-				88484CF21A1821B900DDB473 /* README.md in Sources */,
 				88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */,
 				88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */,
 			);

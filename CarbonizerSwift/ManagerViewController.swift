@@ -42,7 +42,9 @@ class ManagerViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        pageVC = segue.destinationViewController as UIPageViewController
+        if segue.identifier == "initialEmbed" {
+            pageVC = segue.destinationViewController as UIPageViewController
+        }
         
     }
     

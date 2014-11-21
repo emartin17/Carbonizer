@@ -14,16 +14,16 @@ class QuizSettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
-        
-//        let firstCellPath = NSIndexPath(forRow: 0, inSection: 0)
-//        let topCell = self.tableView.cellForRowAtIndexPath(firstCellPath)
-//        let topBorder = UIView(frame: CGRectMake(15, 0, self.view.bounds.size.width-15, 0.5))
-//        topBorder.backgroundColor = UIColor(red: 194/255, green: 192/255, blue: 199/255, alpha: 0.9)
-//        topCell?.addSubview(topBorder)
+        let firstCellPath = NSIndexPath(forRow: 0, inSection: 0)
+        let topCell = self.tableView.cellForRowAtIndexPath(firstCellPath)!
+        let topBorder = UIView(frame: CGRectMake(15, 0, self.view.bounds.size.width-15, 0.5))
+        topBorder.backgroundColor = UIColor(red: 194/255, green: 192/255, blue: 199/255, alpha: 0.9)
+        topCell.addSubview(topBorder)
         
         
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
+        
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -45,28 +45,26 @@ class QuizSettingsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 5
+        return 4
     }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath {
+        tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.None)
+        return indexPath
+    }
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        selectedCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        if selectedCell.accessoryType == UITableViewCellAccessoryType.None {
+            selectedCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
+        else if selectedCell.accessoryType == UITableViewCellAccessoryType.Checkmark {
+            selectedCell.accessoryType = UITableViewCellAccessoryType.None
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
-    
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        selectedCell.accessoryType = UITableViewCellAccessoryType.None
-    }
-    
-    /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-    
-    // Configure the cell...
-    
-    return cell
-    }
-    */
     
     /*
     // Override to support conditional editing of the table view.

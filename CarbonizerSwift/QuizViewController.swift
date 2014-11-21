@@ -11,7 +11,6 @@ import UIKit
 class QuizViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var settingsDisplay: UIView!
     
     required init(coder aDecoder: NSCoder) {
@@ -22,23 +21,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let originalOrigin = self.settingsDisplay.frame.origin
-//        UIView.transitionWithView(self.view, duration: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-//            self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
-//            
-//            //            self.settingsDisplay.transform = CGAffineTransformIdentity
-//            }, completion: { (finished: Bool) -> () in
-//                UIView.transitionWithView(self.view, duration: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-//                    self.settingsDisplay.hidden = false
-//                    self.settingsDisplay.transform = CGAffineTransformIdentity
-//                    }, completion: nil)
-//        })
-        
         self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
-        UIView.transitionWithView(self.view, duration: 0.75, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.settingsDisplay.hidden = false
-            self.settingsDisplay.transform = CGAffineTransformIdentity
-            }, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,5 +36,28 @@ class QuizViewController: UIViewController {
         
     }
     
+    @IBAction func toggleSettings(sender : UIButton) {
+        if settingsDisplay.hidden {
+            self.showSettings()
+        }
+        else {
+            self.dissmissSettings()
+        }
+    }
+    
+    func showSettings() {
+        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.settingsDisplay.hidden = false
+            self.settingsDisplay.transform = CGAffineTransformIdentity
+            }, completion: nil)
+    }
+    
+    func dissmissSettings() {
+        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
+            }, completion: { (Bool finished) -> () in
+                self.settingsDisplay.hidden = true
+        })
+    }
 }
 

@@ -257,6 +257,8 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="28"/>
                                     </constraint>
                                 </constraints>
+                                <inset key="contentEdgeInsets" minX="-20" minY="-12" maxX="-20" maxY="-12"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="12" maxX="20" maxY="12"/>
                                 <state key="normal" image="moreButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -272,6 +274,9 @@
                                         <include reference="fTC-eu-0Ap"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="toggleSettings:" destination="Yjb-3K-FPV" eventType="touchUpInside" id="lBt-Ko-p9f"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wvR-yN-zON">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -337,7 +342,9 @@
                             <containerView hidden="YES" opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9N1-Y9-oqd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="615" id="Nrh-dl-o2j"/>
+                                    <constraint firstAttribute="height" constant="615" id="Nrh-dl-o2j">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="630"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -371,6 +378,9 @@
                             <constraint firstItem="Gjj-2i-m3j" firstAttribute="top" secondItem="eUq-Qz-AM9" secondAttribute="top" id="5Hg-JE-YTy"/>
                             <constraint firstItem="dai-gl-9FE" firstAttribute="leading" secondItem="kcN-vZ-6Kc" secondAttribute="leading" id="5iG-s3-iGj"/>
                             <constraint firstItem="ynn-1o-aWI" firstAttribute="leading" secondItem="eUq-Qz-AM9" secondAttribute="leading" id="9Jc-yL-IP3"/>
+                            <constraint firstItem="9N1-Y9-oqd" firstAttribute="top" secondItem="d59-YR-jbq" secondAttribute="top" id="AmK-iC-Neq">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="nlY-ai-cfe" firstAttribute="centerX" secondItem="d59-YR-jbq" secondAttribute="centerX" id="CUL-Ji-nUO"/>
                             <constraint firstItem="qsW-DK-Svf" firstAttribute="height" secondItem="etI-wN-gfm" secondAttribute="height" id="Grk-T5-ZIW"/>
                             <constraint firstItem="Gjj-2i-m3j" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wvR-yN-zON" secondAttribute="bottom" constant="50" id="JS4-Ex-p9i">
@@ -480,6 +490,7 @@
                                 <exclude reference="rQG-O9-55I"/>
                                 <exclude reference="yCT-uH-n5f"/>
                                 <exclude reference="3wz-CD-9Ox"/>
+                                <exclude reference="AmK-iC-Neq"/>
                                 <exclude reference="MSA-23-XHg"/>
                                 <exclude reference="NYm-HU-PZW"/>
                                 <exclude reference="NwC-gq-CDD"/>
@@ -561,7 +572,8 @@
                                 <include reference="3gR-kI-SMe"/>
                                 <include reference="rQG-O9-55I"/>
                                 <include reference="yCT-uH-n5f"/>
-                                <include reference="3wz-CD-9Ox"/>
+                                <exclude reference="3wz-CD-9Ox"/>
+                                <include reference="AmK-iC-Neq"/>
                                 <include reference="MSA-23-XHg"/>
                                 <exclude reference="NYm-HU-PZW"/>
                                 <exclude reference="NwC-gq-CDD"/>
@@ -627,25 +639,7 @@
                         <sections>
                             <tableViewSection id="V2t-IL-fVo">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NQQ-Jc-cuo" style="IBUITableViewCellStyleDefault" id="s8x-Tv-mRW">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8x-Tv-mRW" id="ufu-Io-Vwj">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NQQ-Jc-cuo">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="OfY-yq-BhI" style="IBUITableViewCellStyleDefault" id="Rdr-rD-zQH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OfY-yq-BhI" style="IBUITableViewCellStyleDefault" id="Rdr-rD-zQH">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rdr-rD-zQH" id="nDf-3d-oCy">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
@@ -663,7 +657,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Cc3-Ay-fgG" style="IBUITableViewCellStyleDefault" id="JrM-IA-Sbw">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Cc3-Ay-fgG" style="IBUITableViewCellStyleDefault" id="JrM-IA-Sbw">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JrM-IA-Sbw" id="cml-ef-mtT">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
@@ -681,7 +675,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="X1c-8v-wjZ" style="IBUITableViewCellStyleDefault" id="YNq-Fz-f28">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="X1c-8v-wjZ" style="IBUITableViewCellStyleDefault" id="YNq-Fz-f28">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YNq-Fz-f28" id="Gpc-TD-qQf">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
@@ -699,7 +693,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ytO-Gp-WCg" style="IBUITableViewCellStyleDefault" id="ngs-X9-jGH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="ytO-Gp-WCg" style="IBUITableViewCellStyleDefault" id="ngs-X9-jGH">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngs-X9-jGH" id="PNx-cJ-n5G">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>

@@ -11,9 +11,9 @@ import UIKit
 class KeyRecognizeButton: UIButton {
     var sharpImage : UIImageView
     var flatImage : UIImageView
+    var circleLayer : CAShapeLayer
     var sharpActive : Bool
     var activeState : Bool
-    var buttons : [KeyRecognizeButton]
     let mySuperView : UIView?
     
     required init(coder aDecoder: NSCoder) {
@@ -21,19 +21,21 @@ class KeyRecognizeButton: UIButton {
         self.sharpActive = true
         self.sharpImage = UIImageView()
         self.flatImage = UIImageView()
-        buttons = [KeyRecognizeButton]()
+        circleLayer = CAShapeLayer()
         super.init(coder: aDecoder)
-        
         //Add touch recognizer
         self.addTarget(self, action: "buttonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         
         //Set up button asthetics
-        self.layer.borderColor = UIColor(white:221/255, alpha: 1.0).CGColor
-        self.layer.borderWidth = 1.0
         self.backgroundColor = UIColor.clearColor()
-        //        self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: .Normal)
-        self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        self.titleLabel?.font = UIFont(name: "OpenSans-Light", size: 26.25)
+        
+        //Set up circle shape layer
+        self.circleLayer.frame = CGRectMake(0, 0, 57, 57)
+        let circlePath = UIBezierPath(ovalInRect: CGRectMake(0, 0, 57, 57))
+        self.circleLayer.path = circlePath.CGPath
+        self.circleLayer.fillColor = UIColor(red: 64/255, green: 179/255, blue: 66/255, alpha: 1.0).CGColor
+        self.circleLayer.hidden = true
+        self.layer.insertSublayer(self.circleLayer, atIndex: 0)
         
         //Set up sharpImage ImageView
         self.sharpImage.frame = CGRectMake(self.frame.width*0.6152, 16.5, 8.5, 23.5)
@@ -54,23 +56,25 @@ class KeyRecognizeButton: UIButton {
     func setState(toActive : Bool) {
         if toActive {
             self.activeState = true
-            
             //Prepare for transformation by scaling images down
-            let sharpFrame = CGRectMake(self.frame.width*0.6152, self.frame.height*0.2324, 8.5, 23.5)
-            let flatFrame = CGRectMake(self.frame.width*0.7172, self.frame.height*0.2324, 8.5, 23.5)
-            sharpImage.transform = CGAffineTransformMakeScale(0.1, 0.1)
-            flatImage.transform = CGAffineTransformMakeScale(0.1, 0.1)
-            
+            let sharpFrame = CGRectMake(self.frame.width, -23.5, 8.5, 23.5)
+            let flatFrame = CGRectMake(self.frame.width+15, -23.5, 8.5, 23.5)
+            let circleFrame = CGRectMake(0, 0, 57, 57)
+            self.sharpImage.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            self.flatImage.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            self.circleLayer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1)
             //Scale them back up in an ease-out block
             UIView.transitionWithView(self, duration: 0.10, options:UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.sharpImage.hidden = false
                 self.flatImage.hidden = false
+                self.circleLayer.hidden = false
                 self.sharpImage.transform = CGAffineTransformIdentity
                 self.flatImage.transform = CGAffineTransformIdentity
+                self.circleLayer.transform = CATransform3DIdentity
                 self.sharpImage.frame = sharpFrame
                 self.flatImage.frame = flatFrame
+                self.circleLayer.frame = circleFrame
                 }, completion: nil)
-            self.layer.backgroundColor = UIColor(white: 242/255, alpha: 1.0).CGColor
             //self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         }
         else {
@@ -80,13 +84,17 @@ class KeyRecognizeButton: UIButton {
             UIView.transitionWithView(self, duration: 0.10, options:UIViewAnimationOptions.TransitionCrossDissolve, animations: {
                 self.sharpImage.transform = CGAffineTransformMakeScale(0.001, 0.001)
                 self.flatImage.transform = CGAffineTransformMakeScale(0.001, 0.001)
+                self.circleLayer.transform = CATransform3DMakeScale(0.001, 0.001, 0.001)
                 self.sharpImage.hidden = true;
                 self.flatImage.hidden = true;
+                self.circleLayer.hidden = true;
                 self.setAccidental(true)
                 }, completion: nil)
-            self.layer.backgroundColor = UIColor.whiteColor().CGColor
-            //self.setTitleColor(UIColor(white: 204/255, alpha: 1.0), forState: UIControlState.Normal)
         }
+    }
+    
+    func drawCircle() {
+        
     }
     
     func setAccidental(toSharp : Bool) {
@@ -156,12 +164,11 @@ class KeyRecognizeButton: UIButton {
         return nil
     }
     
-    class func deactiveAll(aView : UIView) {
+    class func deactivateAll(aView : UIView) {
         for view in aView.subviews {
             if view.isKindOfClass(KeyRecognizeButton) {
                 view.setState(false)
             }
         }
     }
-    
 }

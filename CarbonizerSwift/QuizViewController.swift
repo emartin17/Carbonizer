@@ -21,7 +21,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
+//        self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +32,7 @@ class QuizViewController: UIViewController {
     @IBAction func submit(sender: UIButton) {
         sender.alpha = 0.4
         sender.enabled = false;
-        KeyRecognizeButton.deactiveAll(self.view)
+        KeyRecognizeButton.deactivateAll(self.view)
         
     }
     

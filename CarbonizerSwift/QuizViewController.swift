@@ -12,16 +12,22 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var settingsDisplay: UIView!
+    @IBOutlet weak var timer: TimerView!
+    var secondsLeft : Int
     
     required init(coder aDecoder: NSCoder) {
+        secondsLeft = 60
         super.init(coder: aDecoder)
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
+        let quizTimer = NSTimer(timeInterval: 1.0, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        let mainLoop = NSRunLoop.mainRunLoop()
+//        mainLoop.addTimer(quizTimer, forMode: NSDefaultRunLoopMode)
+//        self.timer.setProgress(0.0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,6 +41,7 @@ class QuizViewController: UIViewController {
         KeyRecognizeButton.deactivateAll(self.view)
         
     }
+    
     
     @IBAction func toggleSettings(sender : UIButton) {
         if settingsDisplay.hidden {
@@ -58,6 +65,17 @@ class QuizViewController: UIViewController {
             }, completion: { (Bool finished) -> () in
                 self.settingsDisplay.hidden = true
         })
+    }
+    
+    func gameOver() {
+        println("CHUNDRABINDU")
+    }
+    
+    func updateTimer() {
+        self.secondsLeft-=1
+        let progress = Float(60.0-secondsLeft)/60.0
+        println(progress)
+//        self.timer.setProgress(progress)
     }
 }
 

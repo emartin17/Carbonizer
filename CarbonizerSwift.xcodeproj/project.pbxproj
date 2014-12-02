@@ -22,7 +22,7 @@
 		88AE9CEA1A14556400BE8065 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88AE9CE81A14556400BE8065 /* OpenSans-Regular.ttf */; };
 		88AE9CEF1A145CA400BE8065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE9CEE1A145CA400BE8065 /* Main.storyboard */; };
 		88AE9CF11A14612600BE8065 /* KeyRecognizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */; };
-		88F5C8B51A225CC000EB64AB /* TimerCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5C8B41A225CC000EB64AB /* TimerCircle.swift */; };
+		88E4966E1A2D1A3C00376B40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4966D1A2D1A3C00376B40 /* TimerView.swift */; };
 		88F5C8B71A22872900EB64AB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F5C8B61A22872900EB64AB /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		88AE9CE81A14556400BE8065 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		88AE9CEE1A145CA400BE8065 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyRecognizeButton.swift; sourceTree = "<group>"; };
-		88F5C8B41A225CC000EB64AB /* TimerCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCircle.swift; sourceTree = "<group>"; };
+		88E4966D1A2D1A3C00376B40 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		88F5C8B61A22872900EB64AB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */,
-				88F5C8B41A225CC000EB64AB /* TimerCircle.swift */,
+				88E4966D1A2D1A3C00376B40 /* TimerView.swift */,
 				88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */,
 			);
 			name = CustomSubclasses;
@@ -285,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E4966E1A2D1A3C00376B40 /* TimerView.swift in Sources */,
 				888A0E081A195EE4009E9F10 /* ManagerViewController.swift in Sources */,
 				88AE9CC81A1454A800BE8065 /* QuizViewController.swift in Sources */,
 				888A0E0A1A195EEE009E9F10 /* StudyViewController.swift in Sources */,
@@ -292,7 +293,6 @@
 				8807F95D1A1B0772005171F6 /* QuizSettingsTableViewController.swift in Sources */,
 				88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */,
 				88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */,
-				88F5C8B51A225CC000EB64AB /* TimerCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +412,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -424,6 +425,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

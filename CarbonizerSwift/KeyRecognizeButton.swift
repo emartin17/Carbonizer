@@ -40,7 +40,7 @@ class KeyRecognizeButton: UIButton {
         
         if self.titleForState(UIControlState.Normal) == "0" {
             self.accidentalView.frame = CGRectMake(self.frame.width+7, -22, 24.5, 22)
-            self.accidentalView.image = UIImage(named: "sharpFlatSlash.png")
+            self.accidentalView.image = UIImage(named: "sharpFlat.png")
         }
         else {
             self.accidentalView.frame = CGRectMake(self.frame.width+24.5, -22, 7, 22)

@@ -12,16 +12,22 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var settingsDisplay: UIView!
+    @IBOutlet weak var timer: TimerView!
+    var secondsLeft : Int
     
     required init(coder aDecoder: NSCoder) {
+        secondsLeft = 60
         super.init(coder: aDecoder)
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
+        let quizTimer = NSTimer(timeInterval: 1.0, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        let mainLoop = NSRunLoop.mainRunLoop()
+//        mainLoop.addTimer(quizTimer, forMode: NSDefaultRunLoopMode)
+//        self.timer.setProgress(0.0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,32 +38,33 @@ class QuizViewController: UIViewController {
     @IBAction func submit(sender: UIButton) {
         sender.alpha = 0.4
         sender.enabled = false;
-        KeyRecognizeButton.deactiveAll(self.view)
+        KeyRecognizeButton.deactivateAll(self.view)
         
     }
     
+    
     @IBAction func toggleSettings(sender : UIButton) {
-        if settingsDisplay.hidden {
-            self.showSettings()
-        }
-        else {
-            self.dissmissSettings()
-        }
+        let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("quizSettings") as UIViewController
+        popoverVC.modalPresentationStyle = UIModalPresentationStyle.Popover
+        
+        let popoverController = popoverVC.popoverPresentationController
+        popoverController?.sourceView = sender
+        popoverController?.sourceRect = sender.bounds
+        popoverController?.permittedArrowDirections = UIPopoverArrowDirection.Any
+        
+        presentViewController(popoverVC, animated: true, completion: nil)
     }
     
-    func showSettings() {
-        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.settingsDisplay.hidden = false
-            self.settingsDisplay.transform = CGAffineTransformIdentity
-            }, completion: nil)
+    
+    func gameOver() {
+        println("CHUNDRABINDU")
     }
     
-    func dissmissSettings() {
-        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
-            }, completion: { (Bool finished) -> () in
-                self.settingsDisplay.hidden = true
-        })
+    func updateTimer() {
+        self.secondsLeft-=1
+        let progress = Float(60.0-secondsLeft)/60.0
+        println(progress)
+//        self.timer.setProgress(progress)
     }
 }
 

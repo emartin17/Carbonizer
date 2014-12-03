@@ -10,20 +10,14 @@ import UIKit
 
 class QuizSettingsTableViewController: UITableViewController {
     
+    let checkMark = UIImageView(image: UIImage(named: "checkMark.png"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
-        let firstCellPath = NSIndexPath(forRow: 0, inSection: 0)
-        let topCell = self.tableView.cellForRowAtIndexPath(firstCellPath)!
-        let topBorder = UIView(frame: CGRectMake(15, 0, self.view.bounds.size.width-15, 0.5))
-        topBorder.backgroundColor = UIColor(red: 194/255, green: 192/255, blue: 199/255, alpha: 0.9)
-        topCell.addSubview(topBorder)
-        
-        
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
-        
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()

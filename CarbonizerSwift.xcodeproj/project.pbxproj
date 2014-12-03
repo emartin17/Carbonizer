@@ -10,7 +10,6 @@
 		8807F95D1A1B0772005171F6 /* QuizSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8807F95C1A1B0772005171F6 /* QuizSettingsTableViewController.swift */; };
 		888A0E081A195EE4009E9F10 /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0E071A195EE4009E9F10 /* ManagerViewController.swift */; };
 		888A0E0A1A195EEE009E9F10 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0E091A195EEE009E9F10 /* StudyViewController.swift */; };
-		88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */; };
 		88A644811A1535690072BF4A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */; };
 		88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CC51A1454A800BE8065 /* AppDelegate.swift */; };
 		88AE9CC81A1454A800BE8065 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CC71A1454A800BE8065 /* QuizViewController.swift */; };
@@ -22,6 +21,11 @@
 		88AE9CEA1A14556400BE8065 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88AE9CE81A14556400BE8065 /* OpenSans-Regular.ttf */; };
 		88AE9CEF1A145CA400BE8065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE9CEE1A145CA400BE8065 /* Main.storyboard */; };
 		88AE9CF11A14612600BE8065 /* KeyRecognizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */; };
+		88E4966E1A2D1A3C00376B40 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4966D1A2D1A3C00376B40 /* TimerView.swift */; };
+		88ECDA901A2ED2EE000EBB55 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ECDA8E1A2ED2EE000EBB55 /* TemplateIcon2x.png */; };
+		88F5C8B71A22872900EB64AB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F5C8B61A22872900EB64AB /* OpenSans-Bold.ttf */; };
+		88F689D01A2EA7AE00F70DD5 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F689CD1A2EA7AE00F70DD5 /* WYPopoverController.m */; };
+		88F689DB1A2EAF6600F70DD5 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F689CF1A2EA7AE00F70DD5 /* WYStoryboardPopoverSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,6 @@
 		88484CF11A1821B900DDB473 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		888A0E071A195EE4009E9F10 /* ManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
 		888A0E091A195EEE009E9F10 /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
-		88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewChangeSegmentedControl.swift; sourceTree = "<group>"; };
 		88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		88AE9CC01A1454A800BE8065 /* CarbonizerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonizerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AE9CC41A1454A800BE8065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +58,15 @@
 		88AE9CE81A14556400BE8065 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		88AE9CEE1A145CA400BE8065 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyRecognizeButton.swift; sourceTree = "<group>"; };
+		88E4966D1A2D1A3C00376B40 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		88ECDA8E1A2ED2EE000EBB55 /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
+		88F5C8B61A22872900EB64AB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		88F689CC1A2EA7AE00F70DD5 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		88F689CD1A2EA7AE00F70DD5 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		88F689CE1A2EA7AE00F70DD5 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		88F689CF1A2EA7AE00F70DD5 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		88F689D21A2EA7F600F70DD5 /* CarbonizerSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarbonizerSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		88F689E11A2EAFC000F70DD5 /* CarbonizerSwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarbonizerSwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				88484CF11A1821B900DDB473 /* README.md */,
+				88ECDA8E1A2ED2EE000EBB55 /* TemplateIcon2x.png */,
 			);
 			name = Metadata;
 			sourceTree = "<group>";
@@ -88,8 +101,8 @@
 			children = (
 				888A0E071A195EE4009E9F10 /* ManagerViewController.swift */,
 				88AE9CC71A1454A800BE8065 /* QuizViewController.swift */,
-				888A0E091A195EEE009E9F10 /* StudyViewController.swift */,
 				8807F95C1A1B0772005171F6 /* QuizSettingsTableViewController.swift */,
+				888A0E091A195EEE009E9F10 /* StudyViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -97,7 +110,8 @@
 		888A0E0C1A195F11009E9F10 /* CustomSubclasses */ = {
 			isa = PBXGroup;
 			children = (
-				88A6447E1A1533320072BF4A /* ViewChangeSegmentedControl.swift */,
+				88F689CB1A2EA7AE00F70DD5 /* WYPopoverController */,
+				88E4966D1A2D1A3C00376B40 /* TimerView.swift */,
 				88AE9CF01A14612600BE8065 /* KeyRecognizeButton.swift */,
 			);
 			name = CustomSubclasses;
@@ -132,6 +146,8 @@
 				88AE9CCC1A1454A800BE8065 /* Images.xcassets */,
 				88AE9CCE1A1454A800BE8065 /* LaunchScreen.xib */,
 				88AE9CC31A1454A800BE8065 /* Supporting Files */,
+				88F689D21A2EA7F600F70DD5 /* CarbonizerSwift-Bridging-Header.h */,
+				88F689E11A2EAFC000F70DD5 /* CarbonizerSwiftTests-Bridging-Header.h */,
 			);
 			path = CarbonizerSwift;
 			sourceTree = "<group>";
@@ -165,12 +181,25 @@
 		88AE9CEB1A14556F00BE8065 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				88F5C8B61A22872900EB64AB /* OpenSans-Bold.ttf */,
 				88A644801A1535690072BF4A /* OpenSans-Semibold.ttf */,
 				88AE9CE71A14556400BE8065 /* OpenSans-Light.ttf */,
 				88AE9CE81A14556400BE8065 /* OpenSans-Regular.ttf */,
 				88AE9CE51A14555800BE8065 /* MZ-OpenSans-Regular.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		88F689CB1A2EA7AE00F70DD5 /* WYPopoverController */ = {
+			isa = PBXGroup;
+			children = (
+				88F689CC1A2EA7AE00F70DD5 /* WYPopoverController.h */,
+				88F689CD1A2EA7AE00F70DD5 /* WYPopoverController.m */,
+				88F689CE1A2EA7AE00F70DD5 /* WYStoryboardPopoverSegue.h */,
+				88F689CF1A2EA7AE00F70DD5 /* WYStoryboardPopoverSegue.m */,
+			);
+			name = WYPopoverController;
+			path = ../WYPopoverController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ECDA901A2ED2EE000EBB55 /* TemplateIcon2x.png in Resources */,
 				88AE9CE61A14555800BE8065 /* MZ-OpenSans-Regular.otf in Resources */,
 				88AE9CD01A1454A800BE8065 /* LaunchScreen.xib in Resources */,
+				88F5C8B71A22872900EB64AB /* OpenSans-Bold.ttf in Resources */,
 				88AE9CE91A14556400BE8065 /* OpenSans-Light.ttf in Resources */,
 				88AE9CEF1A145CA400BE8065 /* Main.storyboard in Resources */,
 				88AE9CEA1A14556400BE8065 /* OpenSans-Regular.ttf in Resources */,
@@ -278,13 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E4966E1A2D1A3C00376B40 /* TimerView.swift in Sources */,
 				888A0E081A195EE4009E9F10 /* ManagerViewController.swift in Sources */,
 				88AE9CC81A1454A800BE8065 /* QuizViewController.swift in Sources */,
 				888A0E0A1A195EEE009E9F10 /* StudyViewController.swift in Sources */,
 				88AE9CF11A14612600BE8065 /* KeyRecognizeButton.swift in Sources */,
 				8807F95D1A1B0772005171F6 /* QuizSettingsTableViewController.swift in Sources */,
-				88A6447F1A1533320072BF4A /* ViewChangeSegmentedControl.swift in Sources */,
 				88AE9CC61A1454A800BE8065 /* AppDelegate.swift in Sources */,
+				88F689D01A2EA7AE00F70DD5 /* WYPopoverController.m in Sources */,
+				88F689DB1A2EAF6600F70DD5 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +370,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -356,6 +390,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -379,6 +415,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -391,6 +428,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -400,10 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CarbonizerSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +455,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CarbonizerSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -423,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -434,6 +482,8 @@
 				INFOPLIST_FILE = CarbonizerSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarbonizerSwift/CarbonizerSwiftTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarbonizerSwift.app/CarbonizerSwift";
 			};
 			name = Debug;
@@ -442,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -449,6 +500,7 @@
 				INFOPLIST_FILE = CarbonizerSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarbonizerSwift/CarbonizerSwiftTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarbonizerSwift.app/CarbonizerSwift";
 			};
 			name = Release;

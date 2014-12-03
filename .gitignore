@@ -1,1 +1,11 @@
 *.xcodeproj
+
+*.pbxproj
+
+CarbonizerSwift.xcodeproj/project.pbxproj
+
+*.xcuserstate
+
+CarbonizerSwift.xcodeproj/project.xcworkspace/xcuserdata/ericmarkmartin.xcuserdatad/UserInterfaceState.xcuserstate
+
+CarbonizerSwift/WEPopover-master/WEPopover.xcodeproj/project.pbxproj

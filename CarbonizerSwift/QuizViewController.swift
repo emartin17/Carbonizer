@@ -44,28 +44,17 @@ class QuizViewController: UIViewController {
     
     
     @IBAction func toggleSettings(sender : UIButton) {
-        if settingsDisplay.hidden {
-            self.showSettings()
-        }
-        else {
-            self.dissmissSettings()
-        }
+        let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("quizSettings") as UIViewController
+        popoverVC.modalPresentationStyle = UIModalPresentationStyle.Popover
+        
+        let popoverController = popoverVC.popoverPresentationController
+        popoverController?.sourceView = sender
+        popoverController?.sourceRect = sender.bounds
+        popoverController?.permittedArrowDirections = UIPopoverArrowDirection.Any
+        
+        presentViewController(popoverVC, animated: true, completion: nil)
     }
     
-    func showSettings() {
-        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.settingsDisplay.hidden = false
-            self.settingsDisplay.transform = CGAffineTransformIdentity
-            }, completion: nil)
-    }
-    
-    func dissmissSettings() {
-        UIView.transitionWithView(self.view, duration: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.settingsDisplay.transform = CGAffineTransformMakeTranslation(0, self.view.frame.height)
-            }, completion: { (Bool finished) -> () in
-                self.settingsDisplay.hidden = true
-        })
-    }
     
     func gameOver() {
         println("CHUNDRABINDU")

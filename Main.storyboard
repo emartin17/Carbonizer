@@ -588,6 +588,9 @@
                                         <include reference="yXi-GW-BYL"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="toggleSettings:" destination="Yjb-3K-FPV" eventType="touchUpInside" id="KEl-D9-O1f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -767,7 +770,7 @@
         <!--Quiz Settings Table View Controller-->
         <scene sceneID="6EQ-Tv-qML">
             <objects>
-                <tableViewController id="eeO-NV-Fcs" customClass="QuizSettingsTableViewController" customModule="CarbonizerSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="quizSettings" modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" clearsSelectionOnViewWillAppear="NO" id="eeO-NV-Fcs" customClass="QuizSettingsTableViewController" customModule="CarbonizerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="P0J-qX-qfb">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="234"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -775,7 +778,7 @@
                         <sections>
                             <tableViewSection id="Jf2-Ye-6eR">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="wMS-Mn-3Zx" rowHeight="59" style="IBUITableViewCellStyleDefault" id="qXG-M0-RUK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="wMS-Mn-3Zx" rowHeight="59" style="IBUITableViewCellStyleDefault" id="qXG-M0-RUK">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qXG-M0-RUK" id="eDu-Yc-P7B">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -791,8 +794,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="V7t-hi-LkS" rowHeight="59" style="IBUITableViewCellStyleDefault" id="eZu-VM-b5b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="V7t-hi-LkS" rowHeight="59" style="IBUITableViewCellStyleDefault" id="eZu-VM-b5b">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZu-VM-b5b" id="sy5-Pp-3oZ">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -808,8 +812,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ir7-SB-0HQ" rowHeight="59" style="IBUITableViewCellStyleDefault" id="F2m-ql-iyS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="ir7-SB-0HQ" rowHeight="59" style="IBUITableViewCellStyleDefault" id="F2m-ql-iyS">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F2m-ql-iyS" id="cpt-dW-BIY">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -825,8 +830,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e6N-Oi-IBe" rowHeight="59" style="IBUITableViewCellStyleDefault" id="bRX-fn-1uI">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" textLabel="e6N-Oi-IBe" rowHeight="59" style="IBUITableViewCellStyleDefault" id="bRX-fn-1uI">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRX-fn-1uI" id="Lii-Z9-U3Z">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -842,6 +848,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

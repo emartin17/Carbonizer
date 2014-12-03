@@ -14,17 +14,13 @@ class ManagerViewController: UIViewController {
         pageVC = UIPageViewController()
         quizVC = UIViewController()
         studyVC = UIViewController()
-        //        barConstraintsQ = [NSLayoutConstraint()]
-        //        barConstraintsS = [NSLayoutConstraint()]
         quizBtnConstraint = NSLayoutConstraint()
         studyBtnConstraint = NSLayoutConstraint()
         super.init(coder: aDecoder)
-        //        quizBtnConstraint = NSLayoutConstraint(item: self.activeStateBar, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.quizButton, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
-        //        studyBtnConstraint = NSLayoutConstraint(item: self.activeStateBar, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.studyButton, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
-        //        let widthCn = NSLayoutConstraint(item: self.activeStateBar, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 48)
-        //        let heightCn = NSLayoutConstraint(item: self.activeStateBar, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 3)
-        //        barConstraintsQ = [quizBtnConstraint, widthCn, heightCn]
-        //        barConstraintsS = [studyBtnConstraint, widthCn, heightCn]
+        
+        
+        
+        let stuff : WYPopoverController
     }
     
     
